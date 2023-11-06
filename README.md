@@ -1,18 +1,11 @@
 # projet_etl
 
-# récupérer le csv 
-# extraire la colone département
-# extraire les 2 premier chiffres de la colone
-# extraire les évaluations 
-# extraire les noms des restaurants 
-# extraire le numéro d'inspection (utiliser comme id)
-# PowerBi -> dataviz
+# commit: projet brut
+# le git contient 2 jobs: 1 qui permet de renvoyer un CSV qui contient les numeros de départements, l'évaluation sanitaire et les numéros d'inspection dans le but de faire la dataviz sur python (ETL).
+# le deuxième est le jobs qui permet de nettoyer les données dans le but de les rentrer dans une database sous forme de table cependant seul la partie nettoyage des données à été complétée (valeurs abérantes, doublons, etc).
+# il y a ensuite le code python qui permet de faire la dataviz.
 
-# commit_1
-# j'ai vérifier les types d'évaluation possible avec tuniquerow, tmap et tlogrow il y en a 4
-# |Satisfaisant|Très satisfaisant|A améliorer|A corriger de manière urgente|
-# j'ai remplacé ces évaluation par 0 pour l'évaluation la plus mauvaise et 3 our la meilleur etc 
-# pour ça j'ai utilisé une regle dans tmap
-# j'ai aussi extrait les 2 premiers chiffres des codes postaux à l'aide d'une regle tmap
-# j'ai enlevé les doublons avec tuniq 
-# j'ai tout mis dans une base de données sous forme de deux tables communes qui contient les numéros de département et evaluation_id qui contient : numero d'inspection, l'évaluation en int et le nom des resaurants.
+# ATTENTION !!!!!
+# il est nécéssaire de rajouter la ligne 
+# num_inspection;evaluation;departement
+# a l'entete du CSV obtenue avant d'éxecuter le code Python.
